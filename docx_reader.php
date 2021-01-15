@@ -261,10 +261,10 @@ END;
         $result = array();
         $clean_tags = array("&lt;p&gt;&lt;/p&gt;", "&lt;p&gt; &lt;/p&gt;", "&lt;strong&gt; &lt;/strong&gt;","&lt;strong&gt;&lt;/strong&gt;");
         $change_string_for_clean_tags = array("","","","");
-        preg_match('/(\&lt\;h1\&gt\;)(.+)?(\&lt\;\/h1\&gt\;)/', $html, $arr);
+        //preg_match('/(\&lt\;h1\&gt\;)(.+)?(\&lt\;\/h1\&gt\;)/', $html, $arr);
 
         $result['title'] = $h1;
-        $result['text'] =str_replace($arr[0], "", $html);
+        $result['text'] = $html;
         $result['text'] = str_replace($clean_tags,$change_string_for_clean_tags, $result['text']);
         $result['metaTitle'] = $h1.' в Москве - Автосервис "Роверсити"';
         $result['metaDescription'] = $h1. ' в Москве. Бесплатная диагностика. Гарантия качества. Записаться - 8(495)150-70-69.';

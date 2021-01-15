@@ -6,7 +6,6 @@ class Route
     static function start(){
         $controller_name = 'Main';
         $action_name = 'index';
-
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
         if(!empty($routes[1])){
@@ -48,10 +47,10 @@ class Route
                 }
 
             }else{
-                Route::ErrorPage404();
+                //Route::ErrorPage404();
             }
         }else{
-            Route::ErrorPage404();
+            //Route::ErrorPage404();
         }
 
 
